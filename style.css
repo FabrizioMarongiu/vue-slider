@@ -83,3 +83,6 @@
 .list li i.active{
     color:blue;
 }
+img{
+    border-radius: 10px;
+}

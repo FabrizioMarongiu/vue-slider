@@ -14,7 +14,11 @@ const app = new Vue(
         ],
     
         indice: 0,
-    },
+        intervallo: 0,
+        },
+        created(){
+            this.startLoop();
+        },
         methods:{
             next(){
                 console.log(this.indice);
@@ -35,6 +39,14 @@ const app = new Vue(
             circle(index){
                 this.indice = index;
             },
+            startLoop(){
+                this.intervallo = setInterval(() =>{
+                    this.next();
+                },3000);
+            },
+            stopLoop(){
+                clearInterval(this.intervallo);
+            }
         },
         
 

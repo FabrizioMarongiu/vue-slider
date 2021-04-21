@@ -24,11 +24,16 @@
 
     <div id="app">
 
-        <div @click="prev" class="left">
+        <div class="left"
+        @click="prev"
+        @mouseover="stopLoop"
+        @mouseleave="startLoop">
             <i class="fas fa-angle-left"></i>
         </div>
 
-        <div class="box">
+        <div class="box" 
+        @mouseover="stopLoop"
+        @mouseleave="startLoop">
 
             <img :src="image[indice]" alt="Immagini Random">
 
@@ -43,7 +48,10 @@
 
         </div>
 
-        <div @click="next" class="right">
+        <div class="right"
+        @click="next"
+        @mouseover="stopLoop"
+        @mouseleave="startLoop">
             <i class="fas fa-angle-right"></i>
         </div>
 
