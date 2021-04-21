@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- STYLE -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet"> 
+
+    <!-- VUEJS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    
+
+    <title>Sliders</title>
+</head>
+<body>
+
+    <div id="app">
+
+        <div class="left">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+
+        <div class="box">
+
+            <img :src="image[indice]" alt="Immagini Random">
+
+        </div>
+
+        <div class="right">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+
+    </div>
+ 
+    
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
