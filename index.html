@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- VUEJS -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
@@ -23,18 +24,27 @@
 
     <div id="app">
 
-        <div class="left">
-            <i class="fas fa-chevron-left"></i>
+        <div @click="prev" class="left">
+            <i class="fas fa-angle-left"></i>
         </div>
 
         <div class="box">
 
             <img :src="image[indice]" alt="Immagini Random">
 
+            <ul class="list">
+                <li v-for="(pics, index) in image">
+                    <i class="fas fa-circle"
+                    :class="{ active: indice == index}"
+                    @click="circle(index)"
+                    ></i>
+                </li>
+            </ul>
+
         </div>
 
-        <div class="right">
-            <i class="fas fa-chevron-right"></i>
+        <div @click="next" class="right">
+            <i class="fas fa-angle-right"></i>
         </div>
 
     </div>
